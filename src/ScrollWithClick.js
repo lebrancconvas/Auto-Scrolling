@@ -18,7 +18,9 @@ const ScrollWithClick = async() => {
 
     const buttonSelector = "";
 
-    for (let i = 1; i <= 80; i++) {
+    const clickRound = 1000;
+
+    for (let i = 1; i <= clickRound; i++) {
         await page.waitForSelector(buttonSelector);
         await page.click(buttonSelector);
         await page.waitForTimeout(1000);
